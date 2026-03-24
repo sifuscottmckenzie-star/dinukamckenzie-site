@@ -1,0 +1,93 @@
+{% assign s = site.data.site %}
+
+<div class="page active" id="page-home">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow">{{ s.hero_eyebrow }}</p>
+    <h1 class="hero-name">{{ s.hero_name_line1 }}<br>{{ s.hero_name_line2 }}</h1>
+    <div class="hero-badge">{{ s.hero_badge }}</div>
+    <p class="hero-tagline">{{ s.hero_tagline }}</p>
+    <div class="hero-cta">
+      <a class="btn-primary" data-page="{{ s.hero_btn1_page }}">{{ s.hero_btn1_label }}</a>
+      <a class="btn-outline" data-page="{{ s.hero_btn2_page }}">{{ s.hero_btn2_label }}</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-photo">
+      <img src="{{ s.hero_photo | relative_url }}" alt="Dinuka McKenzie" loading="eager">
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-strip">
+  <div class="marquee-inner">
+    {% for item in s.marquee_items %}
+    <span class="marquee-item">{{ item }} <span class="marquee-sep"> &#9670; </span></span>
+    {% endfor %}
+    {% for item in s.marquee_items %}
+    <span class="marquee-item">{{ item }} <span class="marquee-sep"> &#9670; </span></span>
+    {% endfor %}
+    {% for item in s.marquee_items %}
+    <span class="marquee-item">{{ item }} <span class="marquee-sep"> &#9670; </span></span>
+    {% endfor %}
+  </div>
+</div>
+
+<!-- SHE LIED FIRST PROMO -->
+<section class="slf-promo">
+  <div class="slf-promo-visual">
+    <img src="{{ 'images/slf-cover.jpg' | relative_url }}" alt="She Lied First cover" loading="lazy" style="max-width:340px;width:100%;border-radius:3px;box-shadow:0 20px 60px rgba(0,0,0,.4);">
+  </div>
+  <div class="slf-promo-content">
+    <div class="slf-new-tag">{{ s.slf_tag }}</div>
+    <h2 class="slf-title">{{ s.slf_title }}</h2>
+    <p class="slf-author-line">{{ s.slf_author }}</p>
+    <p class="slf-tagline">{{ s.slf_tagline }}</p>
+    <p class="slf-desc">{{ s.slf_desc }}</p>
+    <p class="slf-publisher">{{ s.slf_publisher }}</p>
+    <div class="slf-cta-group">
+      <a href="{{ s.slf_buy_url }}" target="_blank" class="slf-btn-primary">{{ s.slf_buy_label }}</a>
+      <a href="{{ s.slf_more_url }}" target="_blank" class="slf-btn-ghost">{{ s.slf_more_label }} &#8599;</a>
+    </div>
+  </div>
+</section>
+
+<!-- KATE MILES SERIES -->
+<section class="kate-series reveal">
+  <div class="kate-series-inner">
+    <p class="section-tag">Award-Winning Crime Fiction</p>
+    <h2 class="section-title kate-series-title">The Detective Kate Miles Series</h2>
+    <p class="kate-series-sub">Three novels. One unforgettable detective. Published in Australia &amp; the UK.</p>
+
+    <div class="kate-books-grid">
+      {% assign series_ids = "torrent,taken,tipping" | split: "," %}
+      {% for book_id in series_ids %}
+      {% assign book = site.data.books[book_id] %}
+      <div class="kate-book-card" data-page="books" data-scroll="book-{{ book.id }}">
+        <img class="kate-book-cover" src="{{ book.cover_au | relative_url }}" alt="{{ book.title }}" loading="lazy">
+        <div class="kate-book-info">
+          <p class="kate-book-num">{{ book.num }}</p>
+          <h3 class="kate-book-title">{{ book.title }}</h3>
+          <p class="kate-book-desc">{{ book.desc }}</p>
+          <span class="kate-book-link">Read more &#8594;</span>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- STAY IN THE LOOP -->
+<section class="loop-strip">
+  <div class="loop-strip-inner">
+    <p class="loop-label">Stay in the Loop</p>
+    <h2 class="loop-title">Events, Podcasts &amp; News</h2>
+    <p class="loop-sub">Keep up with Dinuka&#8217;s latest appearances, interviews and news.</p>
+    <a class="loop-btn" data-page="news">See News &amp; Events &#8594;</a>
+  </div>
+</section>
+
+</div>
