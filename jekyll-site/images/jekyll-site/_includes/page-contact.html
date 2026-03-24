@@ -1,0 +1,28 @@
+{% assign s = site.data.site %}
+<div class="page" id="page-contact">
+
+<div class="cz-layout">
+  <div class="cz-vline"></div>
+  <div class="cz-left">
+    <div class="cz-content-inner">
+      <h2 class="cz-heading">Get in<br>Touch</h2>
+      <div class="cz-entries">
+        {% for entry in s.contact_entries %}
+    <div class="cz-entry">
+      <div class="cz-entry-inner">
+        <span class="cz-item-index">{{ entry.index }}</span>
+        <h3 class="cz-item-title">{{ entry.title }}</h3>
+        <p class="cz-item-who">{{ entry.who }}</p>
+        <a href="mailto:{{ entry.email }}" class="cz-item-email">{{ entry.email }} &#8599;</a>
+      </div>
+    </div>
+    {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="cz-right">
+    <div class="cz-photo-wrap">
+      <img class="cz-photo" src="images/2021-04-04_Websiteonly_DM_Low-Res_copyright_Emma-Stergio-683x1024.jpg" alt="Dinuka McKenzie" loading="lazy">
+      <div class="cz-photo-shade"></div>
+</div>
+</div>
