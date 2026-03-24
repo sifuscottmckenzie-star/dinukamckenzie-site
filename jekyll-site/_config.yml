@@ -1,0 +1,17 @@
+title: "Dinuka McKenzie"
+description: "Award-winning Australian crime fiction author"
+url: ""
+baseurl: ""
+
+# Build
+markdown: kramdown
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
+  - tina
+  - netlify.toml
