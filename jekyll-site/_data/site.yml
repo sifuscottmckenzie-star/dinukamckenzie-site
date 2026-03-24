@@ -1,0 +1,62 @@
+# ── ANNOUNCE BAR ──
+announce_text: "New Book Out Now:"
+announce_book: "She Lied First"
+announce_sub: "Two sisters. The dream apartment. Two lives about to unravel."
+
+# ── HERO ──
+hero_eyebrow: "Crime Fiction Author"
+hero_name_line1: "Dinuka"
+hero_name_line2: "McKenzie"
+hero_badge: "Winner — 2020 HarperCollins Banjo Prize"
+hero_tagline: "Award-winning Australian crime fiction exploring the hidden fault lines of ordinary lives."
+hero_photo: "images/2021-04-02_DM_Low-Res_copyright_Emma-Stergio-683x1024.jpg"
+hero_btn1_label: "Explore the Books"
+hero_btn1_page: "books"
+hero_btn2_label: "About Dinuka"
+hero_btn2_page: "about"
+
+# ── MARQUEE ──
+marquee_items:
+  - "She Lied First out July 2026"
+  - "Detective Kate Miles Series Out Now"
+
+# ── SHE LIED FIRST PROMO ──
+slf_tag: "New Release — 2026"
+slf_title: "She Lied First"
+slf_author: "Dinuka McKenzie"
+slf_tagline: "Two sisters. The dream apartment. Two lives about to unravel."
+slf_desc: "A gripping standalone psychological suspense — a bold new direction from the award-winning author of the Detective Kate Miles series. Published by HarperCollins Australia 2026."
+slf_publisher: "HarperCollins Australia · 2026"
+slf_buy_url: "https://www.harpercollins.com.au/search-results/?keyword=she+lied+first"
+slf_buy_label: "Order Your Copy"
+slf_more_url: "https://dinukamckenzie.com/news-media/"
+slf_more_label: "More Info"
+
+# ── ABOUT ──
+about_photo: "images/2021-04-01_DM_Low-Res_copyright_Emma-Stergio-683x1024.jpg"
+about_pronunciation: "Dinuka is pronounced Dee-noo-kah — the emphasis is on the second syllable."
+about_bio_para1: "Dinuka McKenzie is an award-winning Australian crime fiction author and the winner of the 2020 HarperCollins Australia Banjo Prize for unpublished fiction."
+about_bio_para2: "Her debut novel The Torrent introduced Detective Sergeant Kate Miles — a pregnant detective navigating a deadly flood investigation — and was shortlisted for the 2023 Davitt Awards and the 2023 Danger Awards."
+about_bio_para3: "The Detective Kate Miles series — The Torrent, Taken, and Tipping Point — is published in Australia by HarperCollins and in the UK by Canelo Crime. Her fourth novel, She Lied First, a standalone psychological suspense, will be published by HarperCollins Australia in July 2026."
+about_bio_para4: "Dinuka is represented by Alex Adsett Literary."
+about_events_text: "Dinuka is available for author talks, panels, workshops, and manuscript mentorship sessions. She regularly appears at writers festivals and library events across Australia."
+about_workshops_text: "Dinuka runs crime fiction writing workshops and manuscript assessment sessions through the South Coast Writers Centre and Writing NSW."
+
+# ── CONTACT ──
+contact_entries:
+  - index: "01"
+    title: "Rights & Literary Agent"
+    who: "Alex Adsett, Alex Adsett Literary"
+    email: "alexadsett@alexadsett.com.au"
+  - index: "02"
+    title: "Media & Publicity — Australia"
+    who: "Hannah Lynch, HarperCollins Australia"
+    email: "hannah.lynch@harpercollins.com.au"
+  - index: "03"
+    title: "Media & Publicity — UK"
+    who: "Kate Shepherd, Canelo Crime"
+    email: "kate@canelo.co"
+  - index: "04"
+    title: "All Other Enquiries"
+    who: "Dinuka McKenzie"
+    email: "DMcKenzie@DinukaMcKenzie.com"

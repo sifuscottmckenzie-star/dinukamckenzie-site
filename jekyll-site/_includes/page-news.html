@@ -1,0 +1,124 @@
+{% assign upcoming = site.data.events.upcoming.events %}
+{% assign past     = site.data.events.past.years %}
+{% assign podcasts = site.data.podcasts.podcasts %}
+{% assign news     = site.data.news.news %}
+
+<div class="page" id="page-news">
+<div class="ne-layout">
+
+  <!-- HERO -->
+  <div class="ne-hero">
+    <div class="ne-hero-text">
+      <span class="ne-hero-kicker">Dinuka McKenzie</span>
+      <h1 class="ne-hero-title">News &amp;<br>Events</h1>
+      <p class="ne-hero-sub">Keep up to date on all of Dinuka&#8217;s news, appearances and events.</p>
+    </div>
+    <img class="ne-hero-photo" src="{{ 'images/2021-04-01_Websiteonly_DM_Low-Res_copyright_Emma-Stergio-683x1024.jpg' | relative_url }}" alt="Dinuka McKenzie" loading="eager">
+  </div>
+
+  <!-- IN-PAGE NAV -->
+  <nav class="ne-subnav" aria-label="Page sections">
+    <button class="ne-subnav-btn active" data-target="ne-sec-events">Events</button>
+    <button class="ne-subnav-btn" data-target="ne-sec-podcasts">Podcasts</button>
+    <button class="ne-subnav-btn" data-target="ne-sec-archive">News &amp; Media</button>
+  </nav>
+
+  <!-- ── EVENTS ── -->
+  <section class="ne-section" id="ne-sec-events">
+
+    <div class="ne-section-head">
+      <h2 class="ne-section-title">Upcoming Events</h2>
+    </div>
+
+    <div class="ne-upcoming">
+      {% for event in upcoming %}
+      <div class="event-upcoming-item">
+        <div class="event-date-box">
+          <div class="event-day">{{ event.day }}</div>
+          <div class="event-mon">{{ event.month }}</div>
+        </div>
+        <div>
+          <p class="event-info-title">{{ event.title }}</p>
+          <p class="event-info-meta">{{ event.venue }}</p>
+        </div>
+        {% if event.link %}
+        <a href="{{ event.link }}" target="_blank" class="event-link">{{ event.button }}</a>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="ne-section-head" style="margin-top:3.5rem;">
+      <h2 class="ne-section-title">Past Events</h2>
+    </div>
+
+    <div class="past-accordion">
+      {% for year_group in past %}
+      <details class="past-year-block" {% if forloop.first %}open{% endif %}>
+        <summary class="past-year-toggle">{{ year_group.year }} <span class="past-toggle-icon"></span></summary>
+        <ul class="past-list">
+          {% for event in year_group.events %}
+          <li>
+            <strong>{{ event.date }}</strong>
+            <span class="pe-title">{{ event.title }}</span>
+          </li>
+          {% endfor %}
+        </ul>
+      </details>
+      {% endfor %}
+    </div>
+
+  </section>
+
+  <!-- ── PODCASTS ── -->
+  <section class="ne-section ne-section--hidden" id="ne-sec-podcasts">
+
+    <div class="ne-section-head">
+      <h2 class="ne-section-title">Podcasts</h2>
+      <p class="ne-section-count">{{ podcasts | size }} episodes</p>
+    </div>
+
+    <div class="ne-podcast-grid">
+      {% for pod in podcasts %}
+      <div class="podcast-card">
+        <img class="podcast-card-img" src="{{ pod.image | relative_url }}" alt="" loading="lazy">
+        <div>
+          <h4>{{ pod.title }}</h4>
+          <p>{{ pod.description }}</p>
+          <a href="{{ pod.link }}" target="_blank" class="podcast-link">Listen Now &#8594;</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+  </section>
+
+  <!-- ── NEWS ARCHIVE ── -->
+  <section class="ne-section ne-section--hidden" id="ne-sec-archive">
+
+    <div class="ne-section-head">
+      <h2 class="ne-section-title">News &amp; Media</h2>
+      <p class="ne-section-count">{{ news | size }} items</p>
+    </div>
+
+    <div class="ne-archive-list">
+      {% for item in news %}
+      <div class="na-item">
+        <div class="na-body">
+          <h3 class="na-title">{{ item.title }}</h3>
+          {% if item.link %}
+          <p class="na-text">{{ item.description | remove: item.link_label }}
+            <a href="{{ item.link }}" target="_blank">{{ item.link_label }}</a>
+          </p>
+          {% else %}
+          <p class="na-text">{{ item.description }}</p>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+  </section>
+
+</div>
+</div>
