@@ -1,0 +1,76 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+
+  - name: "upcoming_events"
+    label: "Upcoming Events"
+    files:
+      - label: "Upcoming Events"
+        name: "upcoming"
+        file: "_data/events/upcoming.yml"
+        fields:
+          - label: "Events"
+            name: "events"
+            widget: "list"
+            fields:
+              - { label: "Day", name: "day", widget: "string" }
+              - { label: "Month & Year", name: "month", widget: "string" }
+              - { label: "Event Title", name: "title", widget: "string" }
+              - { label: "Venue", name: "venue", widget: "string" }
+              - { label: "Ticket URL", name: "link", widget: "string", required: false }
+              - { label: "Button Label", name: "button", widget: "string", required: false }
+
+  - name: "past_events"
+    label: "Past Events"
+    files:
+      - label: "Past Events"
+        name: "past"
+        file: "_data/events/past.yml"
+        fields:
+          - label: "Years"
+            name: "years"
+            widget: "list"
+            fields:
+              - { label: "Year", name: "year", widget: "string" }
+              - label: "Events"
+                name: "events"
+                widget: "list"
+                fields:
+                  - { label: "Date", name: "date", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+
+  - name: "podcasts"
+    label: "Podcasts"
+    files:
+      - label: "Podcasts"
+        name: "podcasts"
+        file: "_data/podcasts.yml"
+        fields:
+          - label: "Podcast Episodes"
+            name: "podcasts"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "string" }
+              - { label: "Listen URL", name: "link", widget: "string" }
+              - { label: "Cover Image", name: "image", widget: "image", required: false }
+
+  - name: "news"
+    label: "News & Media"
+    files:
+      - label: "News & Media"
+        name: "news"
+        file: "_data/news.yml"
+        fields:
+          - label: "News Items"
+            name: "news"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Link URL", name: "link", widget: "string", required: false }
+              - { label: "Link Label", name: "link_label", widget: "string", required: false }
