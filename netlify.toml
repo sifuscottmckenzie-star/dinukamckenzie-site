@@ -1,11 +1,1 @@
-[build]
-  command = "bundle exec jekyll build"
-  publish = "_site"
 
-[build.environment]
-  RUBY_VERSION = "3.2.0"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
