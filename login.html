@@ -1,35 +1,23 @@
+---
+layout: none
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login — Dinuka McKenzie</title>
+  <title>Login</title>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <style>
-    body { 
-      font-family: sans-serif; 
-      display: flex; 
-      align-items: center; 
-      justify-content: center; 
-      min-height: 100vh; 
-      margin: 0;
-      background: #f5f0e8;
-    }
-    .wrap { text-align: center; }
-    h1 { font-family: Georgia, serif; color: #3d2b1f; }
-    p { color: #6b5444; }
-  </style>
 </head>
 <body>
-  <div class="wrap">
-    <h1>Dinuka McKenzie</h1>
-    <p>Content Manager</p>
-  </div>
   <script>
-    netlifyIdentity.open();
-    netlifyIdentity.on('login', function(user) {
-      document.location.href = '/admin/';
+    window.addEventListener('load', function() {
+      netlifyIdentity.open('login');
+      netlifyIdentity.on('login', function(user) {
+        document.location.href = '/admin/';
+      });
     });
   </script>
+  <p>Loading...</p>
 </body>
 </html>
