@@ -1,0 +1,7 @@
+{
+  "name": "dinuka-mckenzie-site",
+  "version": "1.0.0",
+  "dependencies": {
+    "tinacms": "^1.5.0"
+  }
+}
