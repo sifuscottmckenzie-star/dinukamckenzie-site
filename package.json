@@ -2,10 +2,11 @@
   "name": "dinuka-mckenzie-site",
   "version": "1.0.0",
   "scripts": {
-    "build": "tinacms build"
+    "dev": "tinacms dev -c \"bundle exec jekyll serve\"",
+    "build": "tinacms build && bundle exec jekyll build"
   },
   "dependencies": {
-    "@tinacms/cli": "^1.5.0",
-    "tinacms": "^1.5.0"
+    "@tinacms/cli": "^1.5.22",
+    "tinacms": "^1.6.2"
   }
 }
