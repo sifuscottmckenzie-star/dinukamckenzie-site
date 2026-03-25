@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+  <script>
+    window.addEventListener('load', function() {
+      netlifyIdentity.open('signup');
+      netlifyIdentity.on('login', function(user) {
+        document.location.href = '/admin/';
+      });
+    });
+  </script>
+  <p>Loading...</p>
+</body>
+</html>
