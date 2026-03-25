@@ -1,9 +1,11 @@
 import { defineConfig } from "tinacms";
 
+const branch = "main";
+
 export default defineConfig({
-  branch: "main",
-  clientId: "e5af77a0-63a3-433e-8571-1a64ccd22d4c",
-  token: "124879f90bca7353301ad21ad915559fe583316d",
+  branch,
+  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID!,
+  token: process.env.TINA_TOKEN!,
 
   build: {
     outputFolder: "admin",
