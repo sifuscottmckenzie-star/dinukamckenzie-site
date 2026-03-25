@@ -1,10 +1,9 @@
 [build]
-  command = "npm install && TINA_PUBLIC_IS_LOCAL=true npx tinacms build && bundle exec jekyll build"
+  command = "bundle exec jekyll build"
   publish = "_site"
 
 [build.environment]
   RUBY_VERSION = "3.2.0"
-  NODE_VERSION = "18"
 
 [[redirects]]
   from = "/*"
