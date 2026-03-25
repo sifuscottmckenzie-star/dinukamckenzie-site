@@ -1,5 +1,5 @@
 [build]
-  command = "npm install && npm run build"
+  command = "npm install && TINA_PUBLIC_IS_LOCAL=true npx tinacms build && bundle exec jekyll build"
   publish = "_site"
 
 [build.environment]
