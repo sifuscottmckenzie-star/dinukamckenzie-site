@@ -1,7 +1,11 @@
 {
   "name": "dinuka-mckenzie-site",
   "version": "1.0.0",
+  "scripts": {
+    "build": "tinacms build"
+  },
   "dependencies": {
+    "@tinacms/cli": "^1.5.0",
     "tinacms": "^1.5.0"
   }
 }
