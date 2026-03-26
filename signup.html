@@ -1,5 +1,5 @@
 ---
-layout: none
+layout: null
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -16,8 +16,11 @@ layout: none
       netlifyIdentity.on('login', function(user) {
         document.location.href = '/admin/';
       });
+      netlifyIdentity.on('signup', function(user) {
+        document.location.href = '/admin/';
+      });
     });
   </script>
-  <p>Loading...</p>
+  <p style="font-family:sans-serif;text-align:center;margin-top:40vh;">Loading sign up...</p>
 </body>
 </html>
