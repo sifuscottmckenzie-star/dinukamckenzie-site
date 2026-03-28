@@ -116,7 +116,7 @@ export default defineConfig({
             fields: [
               { type: "string", name: "title",      label: "Title" },
               { type: "string", name: "link",       label: "Link URL" },
-              { type: "string", name: "link_label", label: "Link Label" },
+              { type: "string", name: "link_label", label: "Link Label " },
             ],
           },
         ],
