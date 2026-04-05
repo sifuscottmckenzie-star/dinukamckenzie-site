@@ -838,7 +838,20 @@ setInterval(function() { goPraise((cur+1) % quotes.length); }, 5000);
 // ── BOOK QUOTE CAROUSELS ──
 document.querySelectorAll('.bqc').forEach(function(carousel) {
   var slides = Array.from(carousel.querySelectorAll('.bqc-slide'));
-  var dottInterval(function() { goTo(current+1); }, 3800); }
+  var dots   = Array.from(carousel.querySelectorAll('.bqc-dot'));
+  var counter = carousel.querySelector('.bqc-counter');
+  var total  = slides.length, current = 0, timer = null;
+  var row    = carousel.closest('.book-row');
+  function goTo(idx) {
+    slides[current].classList.remove('bqc-active');
+    slides[current].classList.add('bqc-exit');
+    setTimeout(function() { slides[current].classList.remove('bqc-exit'); }, 600);
+    current = (idx + total) % total;
+    slides[current].classList.add('bqc-active');
+    dots.forEach(function(d,i) { d.classList.toggle('active', i===current); });
+    if (counter) counter.textContent = (current+1) + ' / ' + total;
+  }
+  function start() { if (!timer) timer = setInterval(function() { goTo(current+1); }, 3800); }
   function stop()  { clearInterval(timer); timer = null; }
   dots.forEach(function(d,i) { d.addEventListener('click', function() { goTo(i); }); });
   var prev = carousel.querySelector('.bqc-prev');
