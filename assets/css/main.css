@@ -639,34 +639,9 @@ details[open] .past-toggle-icon::after{transform:translate(-50%,-50%) rotate(90d
 
 @media (max-width: 960px){
 
-  /* Stack hero layout */
-  .ne-hero{
-    grid-template-columns: 1fr;
-    min-height: auto;
-    height: auto;
-    overflow: visible;
-  }
-
-  /* Allow image container to grow naturally */
-  .ne-hero-photo{
-    position: relative;
-    inset: auto;
-    height: auto;
-    min-height: auto;
-    overflow: visible;
-  }
-
-  /* ✅ STOP image cropping */
-  .ne-hero-photo img{
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    object-position: center top;
-    display: block;
-  }
-
-  /* Remove gradient overlay on mobile (optional) */
-  .ne-hero-photo::after{
-    display: none;
-  }
+  .ne-hero-photo{display: block !important;}
+  .ne-hero{grid-template-columns: 1fr;min-height:auto;height: auto;overflow: visible;}
+  .ne-hero-photo{position: relative;inset: auto;height: auto;min-height: auto;overflow: visible;}
+  .ne-hero-photo img{width: 100%;height: auto;object-fit: contain;object-position: center top;display: block;}
+  .ne-hero-photo::after{display: none;}
 }
