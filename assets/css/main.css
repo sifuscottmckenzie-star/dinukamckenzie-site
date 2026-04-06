@@ -639,9 +639,35 @@ details[open] .past-toggle-icon::after{transform:translate(-50%,-50%) rotate(90d
 
 @media (max-width: 960px){
 
-  .ne-hero-photo{display: block !important;}
-  .ne-hero{grid-template-columns: 1fr;min-height:auto;height: auto;overflow: visible;}
-  .ne-hero-photo{position: relative;inset: auto;height: auto;min-height: auto;overflow: visible;}
-  .ne-hero-photo img{width: 100%;height: auto;object-fit: contain;object-position: center top;display: block;}
-  .ne-hero-photo::after{display: none;}
+  /* HERO — mobile/tablet */
+  .ne-hero{
+    grid-template-columns: 1fr;
+    min-height: auto;
+    height: auto;
+    overflow: visible;
+  }
+
+  /* Ensure the photo is not hidden by earlier rules */
+  .ne-hero-photo{
+    display: block !important;   /* overrides any display:none */
+    position: relative;
+    inset: auto;
+    height: auto;
+    min-height: auto;
+    overflow: visible;
+  }
+
+  /* Show full image (no cropping) */
+  .ne-hero-photo img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center top;
+    display: block;
+  }
+
+  /* Optional overlay removal on mobile */
+  .ne-hero-photo::after{
+    display: none;
+  }
 }
