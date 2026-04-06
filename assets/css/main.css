@@ -636,30 +636,38 @@ details[open] .past-toggle-icon::after{transform:translate(-50%,-50%) rotate(90d
   .ne-hero-title{font-size:2.8rem;}
   .ne-subnav-btn{font-size:.65rem;padding:.9rem .9rem;letter-spacing:.1em;}
 }
+
 @media (max-width: 960px){
 
-  .hero{
+  /* Stack hero layout */
+  .ne-hero{
     grid-template-columns: 1fr;
+    min-height: auto;
+    height: auto;
+    overflow: visible;
+  }
+
+  /* Allow image container to grow naturally */
+  .ne-hero-photo{
+    position: relative;
+    inset: auto;
+    height: auto;
     min-height: auto;
     overflow: visible;
   }
 
-  .hero-right{
-    overflow: visible;
-  }
-
-  .hero-photo{
-    position: relative;
-    inset: auto;
-  }
-
-  .hero-photo img{
+  /* ✅ STOP image cropping */
+  .ne-hero-photo img{
     width: 100%;
     height: auto;
     object-fit: contain;
+    object-position: center top;
+    display: block;
   }
 
-  .hero-photo::after{
+  /* Remove gradient overlay on mobile (optional) */
+  .ne-hero-photo::after{
     display: none;
   }
+}
 }
