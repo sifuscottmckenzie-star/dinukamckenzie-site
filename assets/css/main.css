@@ -639,7 +639,7 @@ details[open] .past-toggle-icon::after{transform:translate(-50%,-50%) rotate(90d
 
 @media (max-width: 768px){
 
-  /* HERO — mobile/tablet */
+  /* HERO container */
   .ne-hero{
     grid-template-columns: 1fr;
     min-height: auto;
@@ -647,28 +647,21 @@ details[open] .past-toggle-icon::after{transform:translate(-50%,-50%) rotate(90d
     overflow: visible;
   }
 
-  /* Ensure the photo is not hidden by earlier rules */
+  /* Hero image wrapper */
   .ne-hero-photo{
-    display: block !important;   /* overrides any display:none */
-    position: relative;
-    inset: auto;
     height: auto;
-    min-height: auto;
+    max-height: none;
+    position: relative;
     overflow: visible;
   }
 
- /* Show more of image (reduced cropping, still fills hero) */
-.ne-hero-photo img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 20%;
-  display: block;
-  
-  }
-
-  /* Optional overlay removal on mobile */
-  .ne-hero-photo::after{
-    display: none;
+  /* Hero image itself */
+  .ne-hero-photo img{
+    width: 100%;
+    height: auto;
+    max-height: 70vh;          /* shows more image without being huge */
+    object-fit: cover;         /* keeps it visually strong */
+    object-position: center top;
+    display: block;
   }
 }
