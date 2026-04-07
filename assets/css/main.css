@@ -637,7 +637,7 @@ details[open] .past-toggle-icon::after{transform:translate(-50%,-50%) rotate(90d
   .ne-subnav-btn{font-size:.65rem;padding:.9rem .9rem;letter-spacing:.1em;}
 }
 
-@media (max-width: 960px){
+@media (max-width: 768px){
 
   /* HERO — mobile/tablet */
   .ne-hero{
