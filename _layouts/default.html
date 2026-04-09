@@ -165,7 +165,7 @@ nav.scrolled{box-shadow:0 2px 20px rgba(61,43,31,.08);}
 .past-list li:last-child{border-bottom:none;}
 .past-list li strong{font-family:"Playfair Display",serif;font-size:.78rem;font-weight:700;color:var(--rust);letter-spacing:.04em;line-height:1.6;}
 .past-list li span.pe-title{font-size:.9rem;color:var(--mid);line-height:1.55;}
-@media(max-width:600px){
+(max-width:600px){
   .past-list li{grid-template-columns:62px 1fr;gap:.8rem;}
   .past-list li strong{font-size:.72rem;}
   .past-list li span.pe-title{font-size:.84rem;}
@@ -268,9 +268,9 @@ footer{background:var(--brown);padding:4.5rem 4.5rem 2.5rem;}
 @media(max-width:960px){
   .kate-series{padding:4rem 1.5rem;}
   .kate-books-grid{grid-template-columns:1fr;}
-  .kate-book-cover{aspect-ratio:2/3;object-fit:cover;object-position:top;width:100%;}
-  .kate-book-card{overflow:visible;}
-  .kate-book-card img{height:auto;}
+  .kate-book-card{overflow:hidden;}
+  .kate-book-cover{width:100%;height:420px;aspect-ratio:unset;object-fit:cover;object-position:top;display:block;}
+  .kate-book-card img{height:420px;}
 }
 /* STAY IN THE LOOP */
 .loop-strip{background:var(--rust);padding:5rem 4.5rem;text-align:center;position:relative;overflow:hidden;}
