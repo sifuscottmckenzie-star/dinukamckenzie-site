@@ -263,7 +263,7 @@ footer{background:var(--brown);padding:4.5rem 4.5rem 2.5rem;}
   .nav-tabs li a{padding:.35rem .6rem;font-size:.68rem;}
   .hero{grid-template-columns:1fr;min-height:auto;}
   .hero-left{padding:5rem 1.5rem 3rem;}
-  .hero-right{height:65vw;}
+  .hero-right{height:85vw;}
   .slf-promo{grid-template-columns:1fr;}
   .slf-promo-content{padding:3rem 1.5rem;}
   .books-section,.ow-section{padding:5rem 1.5rem;}
@@ -607,44 +607,64 @@ details[open] .past-toggle-icon::after{transform:translate(-50%,-50%) rotate(90d
 .ne-archive-list .na-text a:hover{border-color:var(--rust);}
 .ne-archive-list .na-img{display:none;}
 
-@media(max-width:960px){
-  .ne-hero{grid-template-columns:1fr;margin-top:72px;}
-  .ne-hero-photo{display:none;}
-  .ne-hero-text{padding:3rem 1.5rem 2.5rem;}
-  .ne-subnav{padding:0 1rem;top:72px;overflow-x:auto;}
-  .ne-section{padding:2.5rem 1.5rem 3rem;}
-  .ne-podcast-grid{grid-template-columns:1fr 1fr;}
-}
-@media(max-width:600px){
-  .ne-podcast-grid{grid-template-columns:1fr;}
-}
+/* ── BASE: All images scale proportionally ── */
+img { display:block; max-width:100%; height:auto; }
 
-@media(max-width:480px){
-  .nav-tabs li a{padding:.35rem .5rem;font-size:.62rem;letter-spacing:.03em;}
-  .nav-logo{font-size:.95rem;}
-}
-
-@media(max-width:960px){
-  .book-buy-btn{font-size:.65rem;padding:.5rem 1rem;}
-  .book-more-btn{font-size:.65rem;}
+/* HOME — Hero photo & Kate Miles books */
+@media (max-width:960px) {
+  .hero-right { height:85vw; min-height:300px; max-height:520px; }
+  .hero-photo img { object-fit:cover; object-position:top center; height:100% !important; }
+  .slf-promo { grid-template-columns:1fr; }
+  .slf-promo-visual { min-height:320px; padding:3rem 2rem; }
+  .slf-cover-large { width:55%; max-width:220px; transform:none !important; }
+  .slf-promo-content { padding:3rem 1.5rem; }
+  .kate-books-grid { grid-template-columns:1fr; gap:1.5rem; }
+  .kate-book-cover { aspect-ratio:3/2; object-fit:cover; object-position:top; width:100%; }
+  .kate-series { padding:4rem 1.5rem; }
 }
 
-@media(max-width:480px){
-  .book-covers-wrap .book-cover{width:80px;}
-  .book-row{gap:1rem;}
-  .cz-heading{font-size:2.8rem;}
-  .ne-hero-title{font-size:2.8rem;}
-  .ne-subnav-btn{font-size:.65rem;padding:.9rem .9rem;letter-spacing:.1em;}
+/* ABOUT — Gallery photos all visible */
+@media (max-width:960px) {
+  .about-photos-grid { grid-template-columns:1fr 1fr; grid-template-rows:unset; gap:.8rem; }
+  .about-photo-item.portrait, .about-photo-item.landscape { grid-row:unset; grid-column:unset; }
+  .about-photo-item.portrait img { aspect-ratio:2/3; height:auto; }
+  .about-photo-item.landscape img { aspect-ratio:3/2; width:100%; height:auto; }
+  .photo-gallery { grid-template-columns:repeat(2,1fr); gap:.8rem; }
+  .gallery-item img { aspect-ratio:2/3; height:auto; }
+  .about-top-row { grid-template-columns:1fr; gap:1.5rem; }
+  .about-top-photo { max-width:240px; }
+  .about-top-photo img { height:auto; aspect-ratio:3/4; object-fit:cover; object-position:top; }
 }
 
-@media (max-width: 768px){
+/* NEWS & EVENTS — Show Dinuka's photo on mobile */
+@media (max-width:960px) {
+  .ne-hero { grid-template-columns:1fr; margin-top:72px; min-height:auto; }
+  .ne-hero-photo { display:block !important; width:100%; height:52vw; min-height:200px; max-height:280px; object-fit:cover; object-position:top center; opacity:.8; }
+  .ne-hero-text { padding:2.5rem 1.5rem 2rem; }
+  .ne-podcast-grid { grid-template-columns:1fr; }
+  .ne-subnav { padding:0 1rem; top:72px; overflow-x:auto; }
+  .ne-section { padding:2.5rem 1.5rem 3rem; }
+}
 
-  /* Mobile fix for HERO image */
-  .hero-photo img{
-    height: auto !important;   /* overrides height: 100% */
-    max-height: 70vh;
-    object-fit: contain;       /* shows more of the image */
-    object-position: center top;
-    display: block;
+/* CONTACT — Show Dinuka's face */
+@media (max-width:960px) {
+  .cz-layout { grid-template-columns:1fr; min-height:auto; }
+  .cz-vline { display:none; }
+  .cz-right { min-height:80vw; max-height:400px; }
+  .cz-photo { object-fit:cover; object-position:top center; height:100%; }
+  .cz-left { padding:3.5rem 1.5rem 3rem; }
+}
+
+/* SMALL PHONES < 480px */
+@media (max-width:480px) {
+  .nav-tabs li a { padding:.35rem .5rem; font-size:.62rem; letter-spacing:.03em; }
+  .hero-right { height:90vw; max-height:420px; }
+  .kate-books-grid { grid-template-columns:1fr; }
+  .photo-gallery, .about-photos-grid { grid-template-columns:repeat(2,1fr); }
+  .cz-heading { font-size:2.8rem; }
+  .ne-hero-title { font-size:2.8rem; }
+  .ne-subnav-btn { font-size:.65rem; padding:.9rem; letter-spacing:.1em; }
+  .book-covers-wrap .book-cover { width:80px; }
+  .book-row { gap:1rem; }
   }
 }
