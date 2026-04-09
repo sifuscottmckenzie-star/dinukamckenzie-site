@@ -262,6 +262,7 @@ footer{background:var(--brown);padding:4.5rem 4.5rem 2.5rem;}
   nav{padding:1rem 1.5rem;}
   .nav-tabs li a{padding:.35rem .6rem;font-size:.68rem;}
   .hero{grid-template-columns:1fr;min-height:auto;}
+  .hero-right{height:85vw;min-height:300px;max-height:520px;}
   .hero-left{padding:5rem 1.5rem 3rem;}
   .slf-promo{grid-template-columns:1fr;}
   .slf-promo-content{padding:3rem 1.5rem;}
