@@ -263,7 +263,6 @@ footer{background:var(--brown);padding:4.5rem 4.5rem 2.5rem;}
   .nav-tabs li a{padding:.35rem .6rem;font-size:.68rem;}
   .hero{grid-template-columns:1fr;min-height:auto;}
   .hero-left{padding:5rem 1.5rem 3rem;}
-  .hero-right{height:85vw;}
   .slf-promo{grid-template-columns:1fr;}
   .slf-promo-content{padding:3rem 1.5rem;}
   .books-section,.ow-section{padding:5rem 1.5rem;}
@@ -613,7 +612,7 @@ img { display:block; max-width:100%; height:auto; }
 /* HOME — Hero photo & Kate Miles books */
 @media (max-width:960px) {
   .hero-right { height:85vw; min-height:300px; max-height:520px; }
-  .hero-photo img { object-fit:cover; object-position:top center; height:100% !important; }
+  .hero-photo img { height:100%; object-fit:cover; object-position:top center; }
   .slf-promo { grid-template-columns:1fr; }
   .slf-promo-visual { min-height:320px; padding:3rem 2rem; }
   .slf-cover-large { width:55%; max-width:220px; transform:none !important; }
