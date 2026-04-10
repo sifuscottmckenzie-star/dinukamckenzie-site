@@ -714,8 +714,10 @@ document.querySelectorAll('[data-page]').forEach(function(el) {
   el.addEventListener('click', function(e) {
     e.preventDefault();
     var target = el.getAttribute('data-page');
+    var scroll = el.getAttribute('data-scroll');
     var base = '{{ site.baseurl }}'.replace(/\/+$/, '');
     var url = base + (pageMap[target] || '/');
+    if (scroll) { url = url + '#' + scroll; }
     window.location.href = url;
   });
 });
