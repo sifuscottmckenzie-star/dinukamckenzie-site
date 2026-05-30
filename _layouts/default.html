@@ -678,7 +678,7 @@ document.querySelectorAll('.review-carousel').forEach(function(car) {
     dots.forEach(function(d, i) { d.classList.toggle('active', i === cur); });
     if (counter) counter.textContent = (cur + 1) + ' / ' + total;
   }
-  function startTimer() { if (!timer) timer = setInterval(function() { goTo(cur + 1, 'next'); }, 2000); }
+  function startTimer() { if (!timer) timer = setInterval(function() { goTo(cur + 1, 'next'); }, 4000); }
   function stopTimer() { clearInterval(timer); timer = null; }
   var prevBtn = car.querySelector('.rc-prev');
   var nextBtn = car.querySelector('.rc-next');
