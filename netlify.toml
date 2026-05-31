@@ -1,5 +1,5 @@
 [build]
-  command = "bundle exec jekyll build && NODE_OPTIONS=--max-old-space-size=4096 npx @tinacms/cli@latest build"
+  command = "npm install tinacms @tinacms/cli && bundle exec jekyll build && NODE_OPTIONS=--max-old-space-size=4096 npx @tinacms/cli@latest build"
   publish = "_site"
 
 [build.environment]
