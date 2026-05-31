@@ -7,9 +7,9 @@ export default defineConfig({
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID!,
   token: process.env.TINA_TOKEN!,
 
-  build: {
+ build: {
     outputFolder: "admin",
-    publicFolder: "./",
+    publicFolder: "_site",
   },
 
   media: {
