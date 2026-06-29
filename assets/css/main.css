@@ -585,6 +585,7 @@ details[open] .past-toggle-icon::after{transform:translate(-50%,-50%) rotate(90d
 
 /* Upcoming events */
 .ne-upcoming{display:flex;flex-direction:column;gap:0;}
+.pe-title a{color:inherit;text-decoration:none;}
 
 /* Podcast grid */
 .ne-podcast-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;}
